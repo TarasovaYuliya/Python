@@ -3,15 +3,17 @@
 size = input('Введите количество чисел трибоначчи для вывода: ')
 size = int(size)
 
+
 class GlobalValues:
     L = [0, 0, 1]
+
 
 class Threebonachi:
 
     def __init__(self):
         i = 3
 
-        while i < size+1:
+        while i < size + 1:
             GlobalValues.L.append(GlobalValues.L[i - 1] + GlobalValues.L[i - 2] + GlobalValues.L[i - 3])
             i += 1
 
@@ -23,5 +25,3 @@ class Threebonachi:
 List = Threebonachi()
 for number in List:
     print(number, end=' ')
-
-
